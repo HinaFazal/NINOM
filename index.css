@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/* <!-- Header section start  --> */
+a {
+  color: white;
+}
+
+.header {
+  position: relative;
+  background-image: url(/NINOM/images/slider-img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 26vh;
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: -7rem;
+  font-size: 3rem;
+}
+.list {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  border: 2px solid rgb(46, 41, 41);
+  width: 60%;
+  background-color: rgb(46, 41, 41);
+  text-align: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.list li {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+/* Sidebar Styling */
+/* Styling for header list */
+
+/* Styling for cart icon */
+/* For the background overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+  z-index: 999; /* Just below the sidebar */
+}
+
+/* Show overlay when sidebar opens */
+.overlay.active {
+  display: block;
+}
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.699);
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.sidebar {
+  display: none;
+  width: 500px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: lightgoldenrodyellow;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1001; /* Higher than the overlay */
+  transition: 15s;
+}
+
+.sidebar.open {
+  display: block;
+}
+
+.cart-card {
+  padding: 20px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 15px;
+}
+
+.product-details {
+  flex-grow: 1;
+  margin-left: 6rem;
+  font-weight: 700;
+}
+.sidebar-footer {
+  padding: 10px;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.568);
+}
+
+.add-to-cart-btn,
+.view-details-btn {
+  background-color: rgba(211, 211, 211, 0.699);
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  display: flex;
+  margin: 5px;
+  font-weight: 800;
+}
+
+.add-to-cart-btn:hover,
+.view-details-btn:hover {
+  opacity: 0.9;
+}
+
+/* Header section end */
+/* .fruitshop section start */
+.fruitshop {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fruitshop h1 {
+  font-weight: 800;
+}
+.fruitshop p {
+  margin-top: 1rem;
+}
+.shop-img {
+  width: 30%;
+  height: 10%;
+}
+button {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(46, 41, 41);
+  color: white;
+  padding: 10px;
+  width: 12%;
+  margin: auto;
+  display: flex;
+  margin-top: 1rem;
+}
+/* <!-- Fruit section end --> */
+
+/* <!-- About section start --> */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.about-img {
+  width: 100%;
+  height: auto;
+  border-left: 1.5rem solid gainsboro;
+  border-top: 1.5rem solid gainsboro;
+  border-bottom: 1.5rem solid gainsboro;
+}
+
+.about h6 {
+  margin-top: 8rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+.about p {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 200;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: -2rem;
+}
+.about button {
+  width: 20%;
+}
+/*  <!-- About section end --> */
+
+/* Gallery sction start */
+.Ourfruit {
+  margin-top: 3rem;
+}
+table {
+  /* align-items: center; */
+  padding-left: 2rem;
+  border-spacing: 20px;
+  margin-top: 0%;
+  justify-content: center;
+  text-align: center;
+}
+.Ourfruit h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-left: 27rem;
+  margin-top: 10px;
+}
+/* Gallery section end */
+
+/* <!-- testimonial section start --> */
+.testimonial {
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.testimonial-box {
+  display: inline-block;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+.testimonial h3 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.testimonial-quote {
+  color: #555;
+  padding: 20px;
+}
+
+.quote-img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.testimonial-quote p {
+  display: inline;
+  margin: 0 10px;
+}
+/* <!-- testimonial section end --> *
+
+
+/* <!-- Form section start --> */
+.Login h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 3rem;
+  margin-left: 20rem;
+}
+.form {
+  display: grid;
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+input {
+  width: 40%;
+  padding: 10px;
+  border: 2px solid lightgrey;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 5px 15px;
+}
+.message {
+  padding: 2rem;
+}
+.form-btn {
+  background-color: rgb(255, 166, 0);
+  color: aliceblue;
+  border: none;
+  width: 7rem;
+  margin-left: 1rem;
+}
+/* <!-- Form section end --> */
+
+/* <!-- Footer section start --> */
+.Contact-Us {
+  background-color: rgba(0, 0, 0, 0.877);
+  color: aliceblue;
+  margin-top: 3rem;
+}
+.Contact-Us h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  padding-top: 5rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 8rem;
+}
+
+.box1 {
+  display: flex;
+  padding: 8px;
+  gap: 10px;
+}
+.box2 {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+
+.box3 {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+.Contact-Us input {
+  margin-left: 15rem;
+  width: 30%;
+  border: none;
+}
+
+.Contact-Us button {
+  width: 15%;
+  display: inline-flex;
+  background-color: orange;
+  color: white;
+}
+.social-link {
+  margin: 5rem;
+  display: inline;
+  padding: 10px;
+}
+
+.copy-right-sec {
+  padding: 1rem;
+  background: white;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5rem;
+}
+.copy-right-sec a {
+  color: #fcd462;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
