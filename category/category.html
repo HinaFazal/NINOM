@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Page</title>
-    <link rel="stylesheet" href="product-listing.css" />
+    <link rel="stylesheet" href="category.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,15 +20,17 @@
         <li><a href="../Home.html" id="home-link">Home</a></li>
         <li>
           <a
-            href="./product-listing/product-listing.html"
+            href="../product-listing/product-listing.html"
             id="shop"
             target="_blank"
-            >Shop Page</a
+            >Shop</a
           >
         </li>
-        <li><a href="#" id="our-fruit-link">Cart Page</a></li>
-        <li><a href="#" id="about-link">Category Page</a></li>
-        <li><img src="/NINOM/images/search-icon.png" alt="Search Icon" /></li>
+        <li><a href="#" id="cart">Cart</a></li>
+        <li>
+          <a href="../category/category.html" id="about-link">Categories</a>
+        </li>
+        <li><img src="../images/search-icon.png" alt="Search Icon" /></li>
         <!-- Cart Icon -->
         <li>
           <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
@@ -44,7 +46,7 @@
       <div class="cart-card" id="cartItems"></div>
       <div class="sidebar-footer" id="cartFooter"></div>
     </div>
-    <h1 class="shop-page">SHOP PAGE</h1>
+    <h1 class="category-heading"></h1>
     <div class="cards-container"></div>
     <div class="pagination-container"></div>
 
@@ -79,7 +81,6 @@
       </section>
     </footer>
 
-    <script src="product-listing.js"></script>
-    <script src="cart.js"></script>
+    <script src="category.js"></script>
   </body>
 </html>

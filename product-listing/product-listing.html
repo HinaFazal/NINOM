@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop Page</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="product-listing.css" />
     <link
       rel="stylesheet"
@@ -20,20 +20,41 @@
         <li><a href="../Home.html" id="home-link">Home</a></li>
         <li>
           <a
-            href="./product-listing/product-listing.html"
+            href="./product-listing.html"
             id="shop"
             target="_blank"
-            >Shop Page</a
+            >Shop</a
           >
         </li>
-        <li><a href="#" id="our-fruit-link">Cart Page</a></li>
-        <li><a href="#" id="about-link">Category Page</a></li>
-        <li><img src="/NINOM/images/search-icon.png" alt="Search Icon" /></li>
+        <li><a href="#" id="our-fruit-link">Cart</a></li>
+        <li>
+          <!-- <a href="../category/category.html" class="button" id="categoryPopupButton">Categories</a> -->
+          <div id="categoryPopupButton" class="button">Categories</div>
+        </li>
+
+        <li><img src="../images/search-icon.png" alt="Search Icon" /></li>
         <!-- Cart Icon -->
         <li>
-          <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+          <i class="fa-solid fa-cart-shopping" id="cartIcon">
+            <span id="cartCount" class="cart-count"></span>
+          </i>
         </li>
       </ul>
+    </div>
+
+
+    <!-- The Popup -->
+    <div id="categoryPopup" class="popup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Select a Category</h2>
+        <ul class="category-list">
+          <!-- <li><a href="#" data-category="Fruits">Fruits</a></li>
+          <li><a href="#" data-category="Vegetables">Vegetables</a></li>
+          <li><a href="#" data-category="Beverages">Beverages</a></li> -->
+        </ul>
+      </div>
     </div>
 
     <!-- Sidebar card -->
@@ -44,7 +65,7 @@
       <div class="cart-card" id="cartItems"></div>
       <div class="sidebar-footer" id="cartFooter"></div>
     </div>
-    <h1 class="shop-page">SHOP PAGE</h1>
+    <h1 class="shop-page">SHOP</h1>
     <div class="cards-container"></div>
     <div class="pagination-container"></div>
 
@@ -80,6 +101,6 @@
     </footer>
 
     <script src="product-listing.js"></script>
-    <script src="cart.js"></script>
+    <!-- <script src="cart.js"></script> -->
   </body>
 </html>
