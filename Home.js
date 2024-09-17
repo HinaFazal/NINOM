@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("homeLink").addEventListener("click", function () {
-    document.querySelector(".header").scrollIntoView({ behavior: "smooth" });
-  });
+  // document.getElementById("home-link").addEventListener("click", function () {
+  //   document.querySelector(".header").scrollIntoView({ behavior: "smooth" });
+  // });
 
-  document.getElementById("Aboutlink").addEventListener("click", function () {
-    document.getElementById("Aboutlink").scrollIntoView({ behavior: "smooth" });
-  });
-
-  document.getElementById("Ourfruit").addEventListener("click", function () {
-    document.getElementById("Ourfruit").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("about-link").addEventListener("click", function () {
+    document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
   });
 
   document
-    .getElementById("testimonialLink")
+    .getElementById("our-fruit-link")
+    .addEventListener("click", function () {
+      document
+        .querySelector(".fruitshop")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+
+  document
+    .getElementById("testimonial-link")
     .addEventListener("click", function () {
       document
         .getElementById("testimonialSection")
         .scrollIntoView({ behavior: "smooth" });
     });
 
-  document.getElementById("contact us").addEventListener("click", function () {
+  document.getElementById("contact-us").addEventListener("click", function () {
     document
-      .querySelector(".Contact-Us")
+      .querySelector(".contact-us")
       .scrollIntoView({ behavior: "smooth" });
-  });
-
-  document.getElementById("login").addEventListener("click", function () {
-    document.querySelector(".Login").scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -38,11 +38,11 @@ document.body.appendChild(overlay);
 
 cartIcon.addEventListener("click", () => {
   sidebar.classList.toggle("open");
-  overlay.classList.toggle("active"); // Show/hide the overlay
+  overlay.classList.toggle("active");
 });
 
-// Close the sidebar if the overlay is clicked
 overlay.addEventListener("click", () => {
   sidebar.classList.remove("open");
   overlay.classList.remove("active");
 });
+s;

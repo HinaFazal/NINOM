@@ -1,77 +1,46 @@
-const container = document.querySelector(".cards-container");
-let currentPage = 1;
-const productsPerPage = 10;
+// // Fetch products and create dynamic cards
+// fetch("https://dummyjson.com/products")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     const cardsContainer = document.querySelector(".cards-container");
+//     data.products.forEach((product) => {
+//       const productCard = document.createElement("div");
+//       productCard.className = "product-card";
+//       productCard.setAttribute("data-id", product.id); // Set data-id attribute
 
-async function fetchProducts() {
-  try {
-    const response = await fetch("https://dummyjson.com/products?limit=100");
-    const data = await response.json();
-    const products = data.products;
+//       productCard.innerHTML = `
+//                 <img src="${product.thumbnail}" alt="${product.title}">
+//                 <h2>${product.title}</h2>
+//                 <p>${product.description}</p>
+//                 <p>$${product.price}</p>
+//             `;
 
-    displayProducts(products, currentPage);
+//       // Add click event listener to navigate to product details page
+//       productCard.addEventListener("click", function () {
+//         window.location.href = `product.html?id=${product.id}`;
+//       });
 
-    const totalPages = Math.ceil(products.length / productsPerPage);
-    createPaginationButtons(totalPages, products);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
-}
-function displayProducts(products, page) {
-  container.innerHTML = "";
-  const startIndex = (page - 1) * productsPerPage;
-  const endIndex = startIndex + productsPerPage;
-  const paginatedProducts = products.slice(startIndex, endIndex);
+//       cardsContainer.appendChild(productCard);
+//     });
+//   })
+//   .catch((error) => console.error("Error fetching products:", error));
+// // Get product ID from URL
+// const urlParams = new URLSearchParams(window.location.search);
+// const productId = urlParams.get("id");
 
-  paginatedProducts.forEach((product) => {
-    const card = document.createElement("div");
-    card.classList.add("cards");
+// // Fetch product details
+// fetch(`https://dummyjson.com/products/${productId}`)
+//   .then((response) => response.json())
+//   .then((product) => {
+//     // Dynamically create and append HTML elements for product details
+//     const productContainer = document.querySelector(".product-container");
 
-    card.innerHTML = `
-      <div class="image">
-        <img src="${product.thumbnail}" alt="${product.title}" />
-      </div>
-      <div class="Name">
-        <h1>${product.title}</h1>
-        ${product.description}
-      </div>
-      <div class="price">
-        <p>$${product.price}</p>
-        <button>ADD TO CART</button>
-      </div>
-    `;
-    container.appendChild(card);
-  });
-}
-
-function createPaginationButtons(totalPages, products) {
-  const paginationContainer = document.querySelector(".pagination-container");
-  paginationContainer.innerHTML = "";
-
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement("button");
-    button.innerText = i;
-    button.addEventListener("click", () => {
-      currentPage = i;
-      displayProducts(products, currentPage);
-    });
-    paginationContainer.appendChild(button);
-  }
-}
-
-fetchProducts();
-const sidebar = document.querySelector(".sidebar");
-const cartIcon = document.querySelector(".fa-cart-shopping");
-const overlay = document.createElement("div");
-overlay.className = "overlay";
-document.body.appendChild(overlay);
-
-cartIcon.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
-  overlay.classList.toggle("active"); // Show/hide the overlay
-});
-
-// Close the sidebar if the overlay is clicked
-overlay.addEventListener("click", () => {
-  sidebar.classList.remove("open");
-  overlay.classList.remove("active");
-});
+//     productContainer.innerHTML = `
+//             <h1>${product.title}</h1>
+//             <img src="${product.thumbnail}" alt="${product.title}">
+//             <p>${product.description}</p>
+//             <p>Price: $${product.price}</p>
+//             <p>Rating: ${product.rating}</p>
+//         `;
+//   })
+//   .catch((error) => console.error("Error fetching product details:", error));
