@@ -8,14 +8,16 @@ async function fetchProducts(currentPage) {
     const skip = (currentPage - 1) * productsPerPage;
     const apiUrl = `https://dummyjson.com/products?limit=${productsPerPage}&skip=${skip}`;
     // if (search) {
-    //   apiUrl = `https://dummyjson.com/products?limit=${productsPerPage}&skip=${skip}&search=${search}`;
-    // }
+    //   apiUrl = fetch(
+    //     "https://dummyjson.com/products?limit=${searchPerPage}&skip=$(search)"
+    //   )
+    //     .then((res) => res.json())
+    //     .then(console.log);
     const response = await fetch(apiUrl);
     const data = await response.json();
     const products = data.products;
 
     displayProducts(products);
-
     const totalPages = Math.ceil(data.total / productsPerPage);
     console.log(totalPages);
     createPaginationButtons(totalPages);
@@ -23,12 +25,12 @@ async function fetchProducts(currentPage) {
     console.error("Error fetching products:", error);
   }
 }
+
 function displayProducts(products) {
   container.innerHTML = "";
   products.forEach((product) => {
     const card = document.createElement("div");
     card.classList.add("cards");
-    // add category name
     card.innerHTML = `
       <div class="image">
         <img src="${product.thumbnail}" alt="${product.title}" />
@@ -128,14 +130,6 @@ function displayCategories(categories) {
     listItem.appendChild(link);
     categoryListContainer.appendChild(listItem);
   });
-  // categoryListContainer.innerHTML = "";
-  // categories.forEach((category) => {
-  //   const card = document.createElement("li");
-  //   card.innerHTML = `
-  //     <a href="#" data-category="${category}">${category}</a>
-  //   `;
-  //   container.appendChild(card);
-  // });
 }
 
 function updateCartCount() {
@@ -145,8 +139,6 @@ function updateCartCount() {
 }
 
 updateCartCount();
-
-// fetchCategories();
 
 const sidebar = document.querySelector(".sidebar");
 const cartIcon = document.querySelector(".fa-cart-shopping");
@@ -174,12 +166,11 @@ function loadCartItems() {
   cartFooter.innerHTML = "";
 
   if (cartProducts.length === 0) {
-    cartContainer.innerHTML = "<div>Your cart is empty.</div>";
+    cartContainer.innerHTML = "<div class>Your cart is empty.</div>";
     return;
   }
 
   cartProducts.forEach((product) => {
-    // add category name
     const card = `
         <div class="card-content">
           <img src="${product.images[0]}" alt="${product.title}" class="product-image" />
@@ -213,7 +204,6 @@ function loadCartItems() {
       <button class="add-to-cart-btn">CHECKOUT</button>
       <button class="view-details-btn">EDIT CART</button>
     `;
-  // cartFooter.innerHTML = buttons;
 }
 
 loadCartItems();
@@ -237,10 +227,3 @@ window.onclick = function (event) {
     popup.style.display = "none";
   }
 };
-
-// document.querySelectorAll(".category-list a").forEach((item) => {
-//   item.addEventListener("click", function () {
-//     var category = this.getAttribute("data-category");
-//     window.location.href = `../category/category.html?category=${category}`;
-//   });
-// });

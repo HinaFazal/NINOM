@@ -10,7 +10,6 @@ async function fetchProducts(currentPage) {
     const skip = (currentPage - 1) * productsPerPage;
     const response = await fetch(`
       https://dummyjson.com/products/category/${category}?limit=${productsPerPage}&skip=${skip}`);
-    // https://dummyjson.com/products?limit=${productsPerPage}&skip=${skip}`);
     const data = await response.json();
     const products = data.products;
 

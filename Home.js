@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // document.getElementById("home-link").addEventListener("click", function () {
-  //   document.querySelector(".header").scrollIntoView({ behavior: "smooth" });
-  // });
-
   document.getElementById("about-link").addEventListener("click", function () {
     document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
   });

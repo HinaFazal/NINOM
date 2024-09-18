@@ -5,9 +5,11 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-/* <!-- Header section start  --> */
+
 a {
   color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .header {
@@ -47,6 +49,11 @@ a {
   color: rgb(255, 255, 255);
   font-size: 15px;
 }
+*/
+
+/* Base styles for mobile devices */
+
+
 
 /* For the background overlay */
 .overlay {
@@ -158,10 +165,10 @@ a {
   background-color: black;
   transition: 0.15s;
 }
-*/
 
 /* Header section end */
-/* .fruitshop section start */
+
+/* Fruitshop section start */
 .fruitshop {
   display: flex;
   flex-direction: column;
@@ -170,7 +177,6 @@ a {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-left: 10rem;
 }
 
 .fruitshop h1 {
@@ -189,8 +195,6 @@ a {
 .shop-img {
   width: 30%;
   height: auto;
-
-  margin-left: 30rem;
 }
 
 .fruitshop button {
@@ -198,14 +202,12 @@ a {
   color: white;
   padding: 10px;
   width: 12%;
-  margin-left: 45%;
   border: none;
 }
 
-/* <!-- Fruit section end --> */
+/* Fruit section end */
 
-/* <!-- About section start --> */
-
+/* About section start */
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -248,9 +250,10 @@ a {
   margin-top: 1rem;
   margin-left: 15rem;
 }
-/*  <!-- About section end --> */
 
-/*  fruit-Gallery sction start */
+/* About section end */
+
+/* Fruit Gallery section start */
 .Ourfruit {
   text-align: center;
   margin: 0 auto;
@@ -283,7 +286,7 @@ a {
 
 /* Gallery section end */
 
-/* <!-- testimonial section start --> */
+/* Testimonial section start */
 .testimonial {
   text-align: center;
 }
@@ -322,10 +325,10 @@ a {
   display: inline;
   margin: 0 10px;
 }
-/* <!-- testimonial section end --> *
 
+/* Testimonial section end */
 
-/* <!-- Form section start --> */
+/* Form section start */
 .Login h3 {
   font-size: 2rem;
   font-weight: 300;
@@ -356,9 +359,10 @@ input {
   padding: 10px;
   cursor: pointer;
 }
-/* <!-- Form section end --> */
 
-/* <!-- Footer section start --> */
+/* Form section end */
+
+/* Footer section start */
 .contact-us {
   background-color: rgba(0, 0, 0, 0.877);
   color: aliceblue;

@@ -19,44 +19,29 @@
       <ul class="list">
         <li><a href="../Home.html" id="home-link">Home</a></li>
         <li>
-          <a
-            href="./product-listing.html"
-            id="shop"
-            target="_blank"
-            >Shop</a
-          >
+          <a href="./product-listing.html" id="shop" target="_blank">Shop</a>
         </li>
         <li><a href="#" id="our-fruit-link">Cart</a></li>
-        <li>
-          <!-- <a href="../category/category.html" class="button" id="categoryPopupButton">Categories</a> -->
+        <li style="cursor: pointer">
           <div id="categoryPopupButton" class="button">Categories</div>
         </li>
 
         <li><img src="../images/search-icon.png" alt="Search Icon" /></li>
         <!-- Cart Icon -->
-        <li>
+        <li style="cursor: pointer">
           <i class="fa-solid fa-cart-shopping" id="cartIcon">
             <span id="cartCount" class="cart-count"></span>
           </i>
         </li>
       </ul>
     </div>
-
-
-    <!-- The Popup -->
     <div id="categoryPopup" class="popup">
-      <!-- Popup content -->
       <div class="popup-content">
         <span class="close">&times;</span>
         <h2>Select a Category</h2>
-        <ul class="category-list">
-          <!-- <li><a href="#" data-category="Fruits">Fruits</a></li>
-          <li><a href="#" data-category="Vegetables">Vegetables</a></li>
-          <li><a href="#" data-category="Beverages">Beverages</a></li> -->
-        </ul>
+        <ul class="category-list"></ul>
       </div>
     </div>
-
     <!-- Sidebar card -->
     <div class="sidebar">
       <div class="sidebar-header">
@@ -66,6 +51,9 @@
       <div class="sidebar-footer" id="cartFooter"></div>
     </div>
     <h1 class="shop-page">SHOP</h1>
+    <div class="search-bar-container">
+      <input type="text" id="searchBar" placeholder="Search products..." />
+    </div>
     <div class="cards-container"></div>
     <div class="pagination-container"></div>
 
@@ -101,6 +89,5 @@
     </footer>
 
     <script src="product-listing.js"></script>
-    <!-- <script src="cart.js"></script> -->
   </body>
 </html>
