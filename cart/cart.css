@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header {
+  position: relative;
+  background-image: url(/NINOM/images/slider-img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 26vh;
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: -7rem;
+  font-size: 3rem;
+}
+.list {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  border: 2px solid rgb(46, 41, 41);
+  width: 60%;
+  background-color: rgb(46, 41, 41);
+  text-align: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.list li {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+.cart-container {
+  padding: 20px;
+  background-color: white;
+  margin-top: 0;
+  height: 100%;
+  margin-bottom: 0;
+}
+.card-content {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px black;
+  background-color: black;
+  color: #fff;
+}
+.card-content:hover {
+  background-color: white;
+  color: black;
+  transition: 0.15s;
+}
+.product-image {
+  max-width: 200px;
+  margin-right: 20px;
+}
+.product-details {
+  flex: 1;
+}
+.content {
+  text-align: center;
+  margin-top: 4rem;
+  font-weight: 900;
+  font-size: 7rem;
+  text-shadow: 2px 2px 2px burlywood;
+  text-decoration: underline;
+}
+.remove-to-cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  margin-bottom: -15rem;
+
+  float: right;
+}
+.cart-container {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 2px 2px 2px white;
+  color: black;
+}
+.cart-footer {
+  margin-top: 20px;
+}
+.cart-footer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+/* Footer section start */
+.contact-us {
+  background-color: rgba(0, 0, 0, 0.877);
+  color: aliceblue;
+  margin-top: -3;
+}
+.contact-us h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  padding-top: 5rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 8rem;
+}
+.box1 img {
+  width: 15px;
+  height: 45px;
+}
+.box1 {
+  display: flex;
+  padding: 8px;
+  gap: 10px;
+}
+.box2 img {
+  width: 15px;
+  height: 45px;
+}
+.box2 {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+.box3 img {
+  width: 40px;
+  height: 45px;
+}
+.box3 {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+.contact-us input {
+  margin-left: 15rem;
+  width: 30%;
+  border: none;
+  padding: 10px;
+}
+
+.contact-us button {
+  width: 15%;
+  display: inline-flex;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.social-link {
+  margin: 5rem;
+  display: inline;
+  padding: 10px;
+}
+
+.copy-right-sec {
+  padding: 1rem;
+  background: white;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5rem;
+}
+.copy-right-sec a {
+  color: #fcd462;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}

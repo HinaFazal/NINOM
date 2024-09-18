@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link rel="stylesheet" href="cart.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="h1">NINOM</h1>
+      <ul class="list">
+        <li><a href="./index.html" id="home-link">Home</a></li>
+        <li>
+          <a
+            href="./product-listing/product-listing.html"
+            id="shop"
+            target="_blank"
+            >Shop</a
+          >
+        </li>
+        <li><a href="#" id="cart">Cart</a></li>
+        <li>
+          <a href="./category/category.html" id="about-link">Categories</a>
+        </li>
+        <li style="cursor: pointer">
+          <img src="/NINOM/images/search-icon.png" alt="Search Icon" />
+        </li>
+        <!-- Cart Icon -->
+        <li style="cursor: pointer">
+          <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">Cart</div>
+    <main class="cart-container">
+      <div id="cartItems"></div>
+      <div id="cartFooter" class="cart-footer"></div>
+    </main>
+
+    <!-- Footer start -->
+    <footer class="contact-us">
+      <h1>NINOM</h1>
+      <div class="container">
+        <div class="box1">
+          <img src="/NINOM/images/location.png" alt="" />
+          <p>passages of lorem ipsum available</p>
+        </div>
+        <div class="box2">
+          <img src="/NINOM/images/call.png" alt="" />
+          <p>call:+0123456789</p>
+        </div>
+        <div class="box3">
+          <img src="/NINOM/images/mail.png" alt="" />
+          <p>demo@gmail.com</p>
+        </div>
+      </div>
+      <input type="email" placeholder="Enter your email" />
+      <button>SUBSCRIBED</button>
+      <div class="social-link">
+        <img src="/NINOM/images/facebook-logo-button.png" alt="" />
+        <img src="/NINOM/images/twitter-logo-button.png" alt="" />
+        <img src="/NINOM/images/linkedin.png" alt="" />
+        <img src="/NINOM/images/instagram.png" alt="" />
+      </div>
+      <section id="copy-right">
+        <div class="copy-right-sec">
+          © 2024 All Rights Reserved. Design by free HTML Templates
+        </div>
+      </section>
+    </footer>
+    <!-- Footer end -->
+    <script src="cart.js"></script>
+  </body>
+</html>
