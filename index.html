@@ -16,8 +16,47 @@
   </head>
   <body>
 
-    
     <div class="header">
+      <h1 class="h1">NINOM</h1>
+      <ul class="list">
+        <li><a href="./index.html" id="home-link">Home</a></li>
+        <li>
+          <a href="./product-listing/product-listing.html" id="shop" target="_blank">Shop</a>
+        </li>
+        <li><a href="./cart/cart.html" id="our-fruit-link">Cart</a></li>
+        <li style="cursor: pointer">
+          <div id="categoryPopupButton" class="button">Categories</div>
+        </li>
+
+        <li><img src="./images/search-icon.png" alt="Search Icon" /></li>
+        <!-- Cart Icon -->
+        <li style="cursor: pointer">
+          <i class="fa-solid fa-cart-shopping" id="cartIcon">
+            <span id="cartCount" class="cart-count"></span>
+          </i>
+        </li>
+      </ul>
+    </div>
+
+    <div id="categoryPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Select a Category</h2>
+        <ul class="category-list"></ul>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>Cart</h1>
+      </div>
+      <div class="cart-card" id="cartItems"></div>
+      <div class="sidebar-footer" id="cartFooter"></div>
+    </div>
+    
+
+    
+    <!-- <div class="header">
       <h1 class="h1">NINOM</h1>
       <ul class="list">
         <li><a href="./index.html" id="home-link">Home</a></li>
@@ -36,12 +75,12 @@
         <li style="cursor: pointer">
           <img src="./images/search-icon.png" alt="Search Icon" />
         </li>
-        <!-- Cart Icon -->
+        Cart Icon
         <li style="cursor: pointer">
           <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <div class="sidebar">
       <div class="sidebar-header">
@@ -221,7 +260,7 @@
       <h1>NINOM</h1>
       <div class="container">
         <div class="box1">
-          <img src="/NINOM/images/location.png" alt="" />
+          <img src="./images/location.png" alt="" />
           <p>passages of lorem ipsum available</p>
         </div>
         <div class="box2">

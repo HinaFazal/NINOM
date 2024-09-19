@@ -18,27 +18,30 @@
     <div class="header">
       <h1 class="h1">NINOM</h1>
       <ul class="list">
-        <li><a href="./index.html" id="home-link">Home</a></li>
+        <li><a href="../index.html" id="home-link">Home</a></li>
         <li>
           <a
-            href="./product-listing/product-listing.html"
+            href="../product-listing/product-listing.html"
             id="shop"
             target="_blank"
             >Shop</a
           >
         </li>
-        <li><a href="#" id="cart">Cart</a></li>
-        <li>
-          <a href="./category/category.html" id="about-link">Categories</a>
-        </li>
+        <li><a href="./cart.html" id="our-fruit-link">Cart</a></li>
         <li style="cursor: pointer">
-          <img src="/NINOM/images/search-icon.png" alt="Search Icon" />
+          <div id="categoryPopupButton" class="button">Categories</div>
         </li>
-        <!-- Cart Icon -->
-        <li style="cursor: pointer">
-          <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
-        </li>
+
+        <li><img src="../images/search-icon.png" alt="Search Icon" /></li>
       </ul>
+    </div>
+
+    <div id="categoryPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Select a Category</h2>
+        <ul class="category-list"></ul>
+      </div>
     </div>
 
     <div class="content">Cart</div>
