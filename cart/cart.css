@@ -61,8 +61,8 @@ a {
   cursor: pointer;
   align-items: center;
   margin: auto;
-  height: 100%;
-  padding: 10px;
+
+  padding: 5px;
   margin-top: 1rem;
   border-radius: 5px;
   width: 30%;
@@ -80,7 +80,7 @@ a {
 }
 .product-image {
   max-width: 200px;
-  margin-right: 20px;
+  margin-left: 40px;
 }
 .product-details {
   flex: 1;
@@ -99,9 +99,7 @@ a {
   cursor: pointer;
   color: red;
   font-size: 20px;
-  margin-bottom: -15rem;
-
-  float: right;
+  margin-right: 4rem;
 }
 .cart-container {
   text-align: center;
@@ -202,4 +200,8 @@ a {
 }
 a {
   text-decoration: none;
+}
+h2 {
+  text-align: center;
+  margin-top: 3rem;
 }
